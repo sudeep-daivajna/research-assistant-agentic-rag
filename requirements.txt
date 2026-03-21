@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+python-dotenv
+pydantic-settings
+pydantic[email]
+python-jose[cryptography]
+passlib[bcrypt]
+asyncpg
+motor
+faiss-cpu
+langchain
+langchain-groq
+langgraph
+sentence-transformers
+bcrypt==4.0.1
