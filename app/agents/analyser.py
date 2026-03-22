@@ -1,7 +1,7 @@
 from langchain_groq import ChatGroq
 from app.config import settings
 
-llm = ChatGroq(api_key=settings.GROQ_API_KEY, model="llama3-8b-8192")
+llm = ChatGroq(api_key=settings.GROQ_API_KEY, model="llama-3.3-70b-versatile")
 
 async def analyser_node(state: dict) -> dict:
     question = state["question"]

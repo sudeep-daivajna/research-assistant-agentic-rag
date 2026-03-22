@@ -1,5 +1,5 @@
 from app.db.mongo import get_mongo_db
-from app.db.vector import get_vector_store
+from app.db.vector import get_vector_store, save_vector_store
 from sentence_transformers import SentenceTransformer
 import faiss
 import numpy as np
@@ -38,5 +38,6 @@ async def ingest_document(user_id: int, title: str, content: str) -> dict:
     ])
 
     vector_store.add(np.array(embeddings).astype("float32"))
+    save_vector_store()
 
     return {"doc_id": doc_id, "chunks_stored": len(chunks)}
